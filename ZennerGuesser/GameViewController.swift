@@ -11,45 +11,22 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()  // must call viewDidLoad() method on parent class
+        let scene = GameScene(size: CGSize(width: 2048, height: 1536)) //this will create the basic scene
         
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        // now we will configure the scene
+        let skView = self.view as! SKView  //tells spritekit that the current view will be the one shown to the apps user
+        skView.showsFPS = true  //makes sure frames per second will show
+        skView.showsNodeCount = true  //keep track of how many visual elements (nodes) are present
+        
+        skView.ignoresSiblingOrder = true //to be explained
+        scene.scaleMode = .aspectFill  // scene will expand if necessary to fill device screen
+        skView.presentScene(scene)     //make the view show the scene we have configured
     }
-
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
+    
+    override var prefersStatusBarHidden: Bool{
+        return true //this ensures the status bar on the device is hidden
     }
 }
