@@ -26,16 +26,16 @@ class GameScene: SKScene {
         // background is plain white
         backgroundColor = SKColor.white
         
-        cross.position = CGPoint(x: size.width/2, y: size.height/2) // where the cross goes
+        cross.position = CGPoint(x: size.width/2, y: size.height/4*3) // where the cross goes
         cross.setScale(3.0)
         addChild(cross) //this puts cross in
         
-        square.position = CGPoint(x: size.width/2.75, y: size.height/4) // where the square goes
+        square.position = CGPoint(x: size.width/2.60, y: size.height/2) // where the square goes
         square.setScale(3.0)
         addChild(square) //this puts square in
         
         
-        circle.position = CGPoint(x: size.width/2.75, y: size.height/4*3) // where the Circle goes
+        circle.position = CGPoint(x: size.width/2.60, y: size.height/4*3) // where the Circle goes
         circle.setScale(3.0)
         addChild(circle) //this puts Circle in
         
@@ -45,7 +45,7 @@ class GameScene: SKScene {
         addChild(star) //this puts star in
         
         
-        wavylines.position = CGPoint(x: size.width/1.60, y: size.height/4) // where the squiggles goes
+        wavylines.position = CGPoint(x: size.width/1.60, y: size.height/2) // where the squiggles goes
         wavylines.setScale(3.0)
         addChild(wavylines) //this puts star in
         
