@@ -17,7 +17,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         
         // background is plain white
-        let background = SKSpriteNode(imageNamed: "WhiteBa")
+        backgroundColor = SKColor.white
     }
 }
 
