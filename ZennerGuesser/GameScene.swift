@@ -33,6 +33,17 @@ class GameScene: SKScene {
         circle.position = CGPoint(x: size.width/2.75, y: size.height/4*3) // where the Circle goes
         circle.setScale(3.0)
         addChild(circle) //this puts Circle in
+        
+        let star = SKSpriteNode(imageNamed: "Star") //thats the Star card
+        star.position = CGPoint(x: size.width/1.60, y: size.height/4*3) // where the star goes
+        star.setScale(3.0)
+        addChild(star) //this puts star in
+        
+        let wavylines = SKSpriteNode(imageNamed: "WavyLines") //thats the squiggle card
+        wavylines.position = CGPoint(x: size.width/1.60, y: size.height/4) // where the squiggles goes
+        wavylines.setScale(3.0)
+        addChild(wavylines) //this puts star in
+
     }
 }
 
