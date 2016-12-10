@@ -11,11 +11,13 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    //basic score label
+    let selectionLabel = SKLabelNode(fontNamed: "Helvetica-Bold")
+    var selected = 0
     
     override func didMove(to view: SKView) {
         
+   
         // background is plain white
         backgroundColor = SKColor.white
         
@@ -43,6 +45,14 @@ class GameScene: SKScene {
         wavylines.position = CGPoint(x: size.width/1.60, y: size.height/4) // where the squiggles goes
         wavylines.setScale(3.0)
         addChild(wavylines) //this puts star in
+        
+        // what the score label says
+        selectionLabel.text = String(selected)
+        selectionLabel.fontColor = SKColor.black
+        selectionLabel.fontSize = 100
+        selectionLabel.zPosition = 150
+        selectionLabel.position = CGPoint(x: size.width/2, y: size.height/15)
+        addChild(selectionLabel)
 
     }
 }
