@@ -96,12 +96,19 @@ class GameScene: SKScene {
             selectionLabel.text = String(selected)
             print ("clicked cross")
         
+        }
+        
+        // computer randomly picks
+        var random = Int(arc4random_uniform(5)) + 1
+        if random == 1 {
+            l
+            et "Circle"
+        }
     }
 
     
-}
 
 
+
 }
-var random = Int(arc4random_uniform(5)) + 1
 
