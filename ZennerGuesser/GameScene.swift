@@ -33,7 +33,7 @@ class GameScene: SKScene {
         square.position = CGPoint(x: size.width/2.60, y: size.height/2) // where the square goes
         square.setScale(3.0)
         addChild(square) //this puts square in
-        
+         
         
         circle.position = CGPoint(x: size.width/2.60, y: size.height/4*3) // where the Circle goes
         circle.setScale(3.0)
@@ -103,3 +103,5 @@ class GameScene: SKScene {
 
 
 }
+var random = Int(arc4random_uniform(5)) + 1
+
