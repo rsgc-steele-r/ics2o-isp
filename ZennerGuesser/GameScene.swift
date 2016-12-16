@@ -99,10 +99,26 @@ class GameScene: SKScene {
         }
         
         // computer randomly picks
-        var random = Int(arc4random_uniform(5)) + 1
+        let random = Int(arc4random_uniform(5)) + 1
         if random == 1 {
-            l
-            et "Circle"
+            let cross = SKSpriteNode(imageNamed: "Cross")
+            cross.position = CGPoint(x: size.width/2, y: size.height/4)
+            cross.setScale(3.0)
+            addChild(cross)
+        } else if random == 2 {
+            let circle = SKSpriteNode(imageNamed: "Circle")
+            circle.position = CGPoint(x: size.width/2, y: size.height/4)
+            circle.setScale(3.0)
+            addChild(circle)
+        } else if random == 3 {
+            let square = SKSpriteNode(imageNamed: "Square")
+            square.position = CGPoint(x: size.width/2, y: size.height/4)
+            square.setScale(3.0)
+            addChild(square)
+        } else if random == 4 {
+            
+        } else if random == 5 {
+            
         }
     }
 
