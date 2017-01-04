@@ -103,22 +103,33 @@ class GameScene: SKScene {
         if random == 1 {
             let cross = SKSpriteNode(imageNamed: "Cross")
             cross.position = CGPoint(x: size.width/2, y: size.height/4)
+            cross.zPosition = 5
             cross.setScale(3.0)
             addChild(cross)
         } else if random == 2 {
             let circle = SKSpriteNode(imageNamed: "Circle")
             circle.position = CGPoint(x: size.width/2, y: size.height/4)
+            circle.zPosition = 5
             circle.setScale(3.0)
             addChild(circle)
         } else if random == 3 {
             let square = SKSpriteNode(imageNamed: "Square")
             square.position = CGPoint(x: size.width/2, y: size.height/4)
+            square.zPosition = 5
             square.setScale(3.0)
             addChild(square)
         } else if random == 4 {
-            
+            let star = SKSpriteNode(imageNamed: "Star")
+            star.position = CGPoint(x: size.width/2, y: size.height/4)
+            star.zPosition = 5
+            star.setScale(3.0)
+            addChild(star)
         } else if random == 5 {
-            
+            let wavyLines = SKSpriteNode(imageNamed: "WavyLines")
+            wavyLines.position = CGPoint(x: size.width/2, y: size.height/4)
+            cross.zPosition = 5
+            wavyLines.setScale(3.0)
+            addChild(wavyLines)
         }
     }
 
